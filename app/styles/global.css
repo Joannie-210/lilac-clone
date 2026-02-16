@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Gopher';
+  src: url('/fonts/d.woff') format('woff'),;
+  font-weight: 400; /* adjust to match the font file */
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Gopher', sans-serif;
+}
