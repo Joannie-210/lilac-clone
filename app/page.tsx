@@ -2,6 +2,26 @@ import { gopher } from "./fonts";
 import Image from "next/image";
 
 export default function Home() {
+  const specialties = [
+  {
+    title: "Self-Esteem",
+    description:
+      "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
+    image: "/lilac-image-3.webp",
+  },
+  {
+    title: "Relationships",
+    description:
+      "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
+    image: "/lilac-image-4.webp",
+  },
+  {
+    title: "Burnout",
+    description:
+      "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
+    image: "/lilac-image-5.webp",
+  },
+];
   return (
     <>
     <nav className="px-10 flex w-full bg-[#FDF2F2] items-center justify-between font-sans h-15">
@@ -66,6 +86,39 @@ export default function Home() {
           className="object-cover"
           priority
         />
+      </div>
+    </section>
+    <section className="bg-[#fbf6ef] py-20 px-6 md:px-12">
+      {/* Heading */}
+      <h2 className="text-center text-4xl md:text-5xl font-semibold text-[#243a1f] mb-16">
+        My Specialties
+      </h2>
+
+      {/* Cards */}
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+        {specialties.map((item) => (
+          <div
+            key={item.title}
+            className="border border-[#243a1f] bg-[#e9e5dc] p-8 flex flex-col items-center text-center"
+          >
+            <h3 className="text-xl font-semibold text-[#243a1f] mb-4 self-start">
+              {item.title}
+            </h3>
+
+            <p className="text-[#243a1f] mb-10 text-left">
+              {item.description}
+            </p>
+
+            <div className="relative w-64 h-64 rounded-full overflow-hidden mt-auto">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
     </>
