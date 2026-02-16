@@ -1,34 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Contact() {
   return (
 <>
 
       {/* Navigation Header */}
-      <nav className="px-6 md:px-10 flex w-full bg-[#FDF2F2] items-center justify-between font-sans h-20">
-           <Link href="/" className="text-xl md:text-2xl font-bold text-[#243a1f] cursor-pointer">
-           
-               Lilac template
-     
-           </Link>
-           
-           <div className="flex items-center gap-6 md:gap-10 text-[#243a1f] font-medium">
-             <Link 
-               href="/blog" 
-               className="cursor-pointer hover:opacity-70 transition-opacity"
-             >
-               Blog
-             </Link>
-             
-             <Link 
-               href="/contact" 
-               className="cursor-pointer hover:opacity-70 transition-opacity"
-             >
-               Contact
-             </Link>
-           </div>
-         </nav>
+     <Navbar />
    
        <section className="bg-[#cdc9d3] min-h-screen py-16 px-6 md:px-20 lg:px-22 sm:flex flex flex-col justify-center font-sans text-[#1a2e1a]">
       <div className="max-w-7xl bg-green-400mx-auto w-full">
@@ -164,7 +144,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
-     <section className="bg-[#d6d1c9] px-4 py-20 border-b-1 border-[#6e7a54]">
+     <section className="bg-[#f5f2e9] px-4 py-20 border-b-1 border-[#6e7a54]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading */}
@@ -214,6 +194,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    <Footer />
     </>
   );
 }
