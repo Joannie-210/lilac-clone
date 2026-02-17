@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
     return (
     
-  <nav className="px-6 md:px-10 flex w-full bg-[#FDF2F2] items-center justify-between font-sans h-20">
+  <nav className="px-6 md:px-10 flex w-full bg-transparent items-center justify-between font-sans h-20">
            <Link href="/" className="text-xl md:text-2xl font-bold text-[#243a1f] cursor-pointer">
            
                Lilac template

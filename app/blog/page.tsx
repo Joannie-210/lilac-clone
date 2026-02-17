@@ -1,16 +1,45 @@
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
-
+import Link from 'next/link';
 export default function Blog() {
+    const POSTS = [
+  { id: "1", title: "The Art of Healing", date: "3/11/19", image: "/healing.jpg" },
+  { id: "2", title: "Heart & Home", date: "3/11/19",  image: "/home.jpg" },
+  { id: "3", title: "Wholeness", date: "3/11/19",  image: "/wholeness.jpg" },
+  { id: "4", title: "Morning Rituals", date: "3/11/19", image: "/morning.jpg" },
+];
   return (
     <>
-    <Navbar />
-    <section className="min-h-screen bg-[#FDF8F3] flex items-center justify-center px-9 py-8">
+   
+    <nav className="px-6 md:px-10 flex w-full bg-transparent items-center justify-between font-sans h-15">
+           <Link href="/" className="text-xl md:text-2xl font-bold text-[#243a1f] cursor-pointer">
+           
+               Lilac template
+     
+           </Link>
+           
+           <div className="flex items-center gap-6 md:gap-10 text-[#243a1f] font-medium">
+             <Link 
+               href="/blog" 
+               className="cursor-pointer hover:opacity-70 transition-opacity"
+             >
+               Blog
+             </Link>
+             
+             <Link 
+               href="/contact" 
+               className="cursor-pointer hover:opacity-70 transition-opacity"
+             >
+               Contact
+             </Link>
+           </div>
+         </nav>
+    <section className="min-h-screen flex items-center justify-center px-9 py-8">
       <div className="max-w-6xl  md:gap-5 w-full grid grid-cols-1 md:grid-cols-2  items-center">
         
         {/* Left Side: Arched Image Container */}
         <div className="relative flex md:pl-0  max-w-3xl justify-center md:justify-center">
-          <div className="relative w-full md:w-300px   max-w-[380px] h-[600px] overflow-hidden rounded-t-full">
+          <div className="relative w-full md:w-300px   max-w-[420px] h-[600px] overflow-hidden rounded-t-full">
             <Image
               src="/lilac-image-1.webp" // Replace with your image max-w-lg
               alt="Person reading a book"
@@ -23,7 +52,7 @@ export default function Blog() {
 
         {/* Right Side: Text Content */}
         <div className="text-[#1D3319] space-y-6 lg:ml-[-20px] lg:mt-[-50px]  ">
-          <h1 className="text-5xl md:text-6xl tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl tracking-tight">
             The Lilac Blog
           </h1>
           
@@ -41,6 +70,38 @@ export default function Blog() {
 
       </div>
     </section>
+    <section className="min-h-screen bg-[#FDF8F3] lg:pb-25 px-2 md:p-12">
+     <div className="mx-auto grid grid-cols-1 gap-40 md:gap-20 md:grid-cols-2 lg:gap-30 items-start">
+  {POSTS.map((post) => (
+    <div key={post.id} className="group flex flex-col">
+      <Link href={`/blog/${post.id}`}>
+        {/* 1. Removed aspect-square. Added h-auto. */}
+        <div className="relative w-full h-90 overflow-hidden bg-gray-200 cursor-pointer">
+          <Image 
+            src={post.image} 
+            alt={post.title} 
+            
+            width={800} 
+            height={600}
+            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+        </div>
+      </Link>
+
+      <p className="text-sm text-[#1D3319] my-2">{post.date}</p>
+      <h3 className="text-2xl font-bold text-[#1D3319] mb-2">{post.title}</h3>
+      
+      <Link 
+        href={`/blog/${post.id}`}
+        className="w-fit text-sm font-bold mt-2 mb-10 md:mt-10 lg:mb-[-52px] uppercase tracking-widest text-[#1D3319] border-b-2 border-[#1D3319] pb-1 hover:opacity-60 transition-opacity"
+      >
+        Read More
+      </Link>
+    </div>
+  ))}
+</div>
+    </section>
+    
     </>
   );
 }
