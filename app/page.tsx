@@ -65,7 +65,7 @@ const PlusMinusIcon = ({ isOpen }: { isOpen: boolean }) => {
       
       {/* Vertical Line - Rotates 90 degrees to the left */}
       <span 
-        className={`absolute h-full w-[1.5px] bg-[#2D472C] rounded-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        className={`absolute h-full w-[1.5px] bg-[#2D472C] rounded-full transition-all duration-500 ease-in-out ${
           isOpen 
             ? "-rotate-90 opacity-0 scale-y-0" 
             : "rotate-0 opacity-100 scale-y-100"
@@ -84,7 +84,7 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
       
       {/* Vertical Line - Rotates 90 degrees to the left */}
       <span 
-        className={`absolute h-full w-[1.5px] bg-[#2D472C] rounded-full transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        className={`absolute h-full w-[1.5px] bg-[#2D472C] rounded-full transition-all duration-500 ease-in-out ${
           isOpen 
             ? "-rotate-90 opacity-0 scale-y-0" 
             : "rotate-0 opacity-100 scale-y-100"
@@ -102,7 +102,7 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
       {/* HERO SECTION */}
       <section className="px-6 md:px-10 py-12 md:py-20 flex w-full bg-[#FDF2F2] items-center justify-center font-sans">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 max-w-7xl w-full">
-          <div className="relative w-full max-w-[450px] aspect-[3/4]">
+          <div className="relative w-full max-w-112.5 aspect-3/4">
             <Image
               src="/lilac-image-1.webp"
               alt="Lilac Template"
@@ -138,7 +138,7 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </button>
         </div>
-        <div className="hidden lg:block w-1/2 relative min-h-[500px]">
+        <div className="hidden lg:block w-1/2 relative min-h-125">
           <Image
             src="/lilac-image-2.webp"
             alt="Lifestyle flatlay"
@@ -179,7 +179,7 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
       </section>
 
       {/* BIO SECTION (Lilac) */}
-      <section className="bg-[#EBE7E0] min-h-[700px] flex items-center px-6 py-20 md:px-12 lg:px-24">
+      <section className="bg-[#EBE7E0] min-h-175 flex items-center px-6 py-20 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 order-2 lg:order-1">
             <h2 className="text-5xl md:text-7xl font-serif text-[#2D472C] font-semibold">
@@ -198,7 +198,7 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
 
           <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
             {/* Main Arched Image */}
-            <div className="relative w-[300px] h-[450px] md:w-[450px] md:h-[650px] overflow-hidden rounded-t-full shadow-md">
+            <div className="relative w-75 h-112.5 md:w-112.5 md:h-162.5 overflow-hidden rounded-t-full shadow-md">
               <Image 
                 src="/lilac-image-1.webp" 
                 alt="Person holding lilacs"
@@ -222,7 +222,7 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
         {/* Left Side: Arched Image */}
-        <div className="relative w-100 h-145 max-w-[500px] mx-auto lg:mx-0">
+        <div className="relative w-100 h-145 max-w-125 mx-auto lg:mx-0">
           <div className="relative w-full h-full overflow-hidden rounded-t-full shadow-sm">
             <Image
               src="/lilac-image-7.webp" 
@@ -369,15 +369,15 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
         </div>
 
         {/* Bottom Section: Legal & Credits */}
-        <div className="border-t bg-[#EBE7E0] border-[#dcd9ce] py-8 w-full text-center text-sm space-y-4">
-          <div className="flex flex-wrap mb-[-4px] justify-center gap-x-2 gap-y-2">
+        <div className="border-t bg-[#EBE7E0] border-[rgb(220,217,206)] py-8 w-full text-center text-sm space-y-4">
+          <div className="flex flex-wrap mb-1 justify-center gap-x-2 gap-y-2">
             <Link href="/privacy" className="underline">Privacy & Cookies Policy</Link>
             <Link href="/estimate" className="underline">Good Faith Estimate</Link>
             <Link href="/terms" className="underline">Website Terms & Conditions</Link>
             <Link href="/disclaimer" className="underline">Disclaimer</Link>
           </div>
           
-          <p className="pt-4 mb-[22px]">
+          <p className="pt-4 mb-5.5">
             Website Template Credits: <a href="#" className="underline">Go Bloom Creative</a>
           </p>
           

@@ -43,14 +43,14 @@ export default function () {
 
         {/* Bottom Section: Legal & Credits */}
         <div className="border-t bg-[#EBE7E0] border-[#dcd9ce] py-8 w-full text-center text-sm space-y-4">
-          <div className="flex flex-wrap mb-[-4px] justify-center gap-x-2 gap-y-2">
+          <div className="flex flex-wrap -mb-1 justify-center gap-x-2 gap-y-2">
             <Link href="/privacy" className="underline">Privacy & Cookies Policy</Link>
             <Link href="/estimate" className="underline">Good Faith Estimate</Link>
             <Link href="/terms" className="underline">Website Terms & Conditions</Link>
             <Link href="/disclaimer" className="underline">Disclaimer</Link>
           </div>
           
-          <p className="pt-4 mb-[22px]">
+          <p className="pt-4 mb-5.5">
             Website Template Credits: <a href="#" className="underline">Go Bloom Creative</a>
           </p>
           

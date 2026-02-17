@@ -48,7 +48,7 @@ export default function Contact() {
       <div className="flex items-center gap-6 md:gap-10 text-[#243a1f] font-medium">
         <Link 
           href="/blog" 
-          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b-1 ${
+          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b ${
             isActive("/blog") ? "border-[#243a1f]" : "border-transparent"
           }`}
         >
@@ -87,9 +87,9 @@ export default function Contact() {
             </div>
 
             {/* Image Composition */}
-            <div className="relative flex justify-center items-center lg:block w-auto md:pl-12 lg:mt-[-10px] mt-2 pt-1">
+            <div className="relative flex justify-center items-center lg:block w-auto md:pl-12 lg:mt-2.5 mt-2 pt-1">
               {/* Main Arched Image */}
-               <div className="relative w-[180px] h-[250px] md:w-[200px] md:h-[320px] overflow-hidden rounded-t-full shadow-md">
+               <div className="relative w-45 h-62.5 md:w-50 md:h-80 overflow-hidden rounded-t-full shadow-md">
                            <Image 
                              src="/lilac-image-8.webp" 
                              alt="Person holding lilacs"
@@ -99,7 +99,7 @@ export default function Contact() {
                          </div>
               
               {/* Secondary Circular Image */}
-              <div className="absolute hidden lg:block -bottom-0 left-32 md:left-50 w-40 h-40 md:w-36 md:h-36 rounded-full border-[#cdc9d3] overflow-hidden bg-gray-100">
+              <div className="absolute hidden lg:block bottom-0 left-32 md:left-50 w-40 h-40 md:w-36 md:h-36 rounded-full border-[#cdc9d3] overflow-hidden bg-gray-100">
                 <Image
                   src="/lilac-image-6.webp" 
                   alt="Close up flowers" 
@@ -111,12 +111,12 @@ export default function Contact() {
           </div>
 
           {/* Right Column: Information Box */}
-          <div className="w-auto h-full lg:mt-[-80px]">
-            <div className="bg-[#263d1a] text-[#cdc9d3] p-8 md:px-5 md:py-8 leading-relaxed">
+          <div className="w-auto h-full lg:mt-[-100]">
+            <div className="bg-[#263d1a] sm:w-120 mx-auto text-[#cdc9d3] p-8 md:px-5 md:py-8 leading-relaxed">
               <p className="text-md md:text-lg">
                 <span className="font-bold">PLEASE NOTE:</span> If you opt to use a &quot;Form Block&quot; on 
                 your contact page this is not HIPAA-compliant. Squarespace stores data that is input into 
-                forms in the Marketing tab under Profiles. Instead, you can embed a HIPAA-compliant form, 
+                forms in the Marketing tab under Profiles . Instead, you can embed a HIPAA-compliant form, 
                 a link to your client portal, or simply put your email address.
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
-    <section className="bg-[#e5e1d8] min-h-[800px] py-20 px-6 flex flex-col items-center text-center font-sans text-[#1a2e1a]">
+    <section className="bg-[#e5e1d8] min-h-200 py-20 px-6 flex flex-col items-center text-center font-sans text-[#1a2e1a]">
       <div className="max-w-3xl mx-auto">
         
         {/* Header */}
@@ -141,7 +141,7 @@ export default function Contact() {
         </p>
 
         {/* Scheduling Widget Placeholder */}
-        <div className="w-full max-w-md m-auto mb-35 bg-white shadow-sm min-h-[200px] flex flex-col items-center justify-center p-3 md:px-1">
+        <div className="w-full max-w-md m-auto mb-35 bg-white shadow-sm min-h-50 flex flex-col items-center justify-center p-3 md:px-1">
           {/* This mimics the "Page Not Active" box in your screenshot */}
           <div className="space-y-6">
             <h3 className="text-md md:text-xl font-bold text-black">
@@ -187,7 +187,7 @@ export default function Contact() {
           </div>
 
           {/* Map */}
-          <div className="w-full h-[300px] md:h-[400px] rounded-sm overflow-hidden">
+          <div className="w-full h-75 md:h-100 rounded-sm overflow-hidden">
             <iframe
               title="Office Location"
               src="https://www.google.com/maps?q=Minneapolis,MN&output=embed"
@@ -200,7 +200,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
-     <section className="bg-[#f5f2e9] px-4 py-20 border-b-1 border-[#6e7a54]">
+     <section className="bg-[#f5f2e9] px-4 py-20 border-b border-[#6e7a54]">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Heading */}
@@ -211,7 +211,7 @@ export default function Contact() {
         {/* Image Grid */}
         <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-4 gap-4">
           
-          <div className="relative w-full aspect-[5/5]">
+          <div className="relative w-full aspect-5/5">
             <Image
               src="/lilac-image-8.webp"
               alt="Lilac bouquet"
@@ -220,7 +220,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="relative w-full aspect-[5/5]">
+          <div className="relative w-full aspect-5/5">
             <Image
               src="/lilac-image-5.webp"
               alt="Woman organizing books"
@@ -229,7 +229,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="relative w-full aspect-[5/5]">
+          <div className="relative w-full aspect-5/5">
             <Image
               src="/lilac-image-2.webp"
               alt="Notebook and coffee"
@@ -238,7 +238,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="relative w-full aspect-[5/5]">
+          <div className="relative w-full aspect-5/5">
             <Image
               src="/lilac-image-1.webp"
               alt="Woman holding flowers"
