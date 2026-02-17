@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
+import Footer from "@/app/components/Footer";
 
 const BLOG_DATA = [
   { id: "1", title: "Blog Post One", date: "March 11", content: "It all begins with an idea..." },
@@ -95,6 +96,8 @@ export default function BlogPostPage() {
 
       </div>
     </main>
+  
+    <Footer />
     </> 
 );
 }

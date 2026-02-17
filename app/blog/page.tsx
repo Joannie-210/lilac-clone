@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import Link from 'next/link';
+import Footer from '../components/Footer';
 export default function Blog() {
     const POSTS = [
   { id: "1", title: "The Art of Healing", date: "3/11/19", image: "/healing.jpg" },
@@ -101,6 +102,35 @@ export default function Blog() {
   ))}
 </div>
     </section>
+      <section className="bg-[#7A7B44] px-6 py-14 flex justify-center items-center">
+      {/* Outer Border Box */}
+      <div className="border border-white/70 w-full max-w-4xl py-15 px-4 md:px-5 flex flex-col items-center text-center text-white">
+        
+        <h2 className="text-3xl md:text-4xl  mb-4">Subscribe</h2>
+        <p className="text-lg mb-10 opacity-90">
+          Sign up with your email address to receive news and updates.
+        </p>
+
+        {/* Responsive Form Layout */}
+        <form className="w-full max-w-sm flex flex-col md:flex-row gap-3 mb-8">
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="grow p-4 bg-white text-gray-800 outline-none focus:ring-2 focus:ring-white/50"
+            required
+          />
+          <button
+            type="submit"
+            className="border cursor-pointer border-white/80 text-gray-300 hover:bg-white/20 px-4 py-4 uppercase tracking-widest text-xs  transition-colors"
+          >
+            Sign Up
+          </button>
+        </form>
+
+        <p className="text-sm opacity-80">We respect your privacy.</p>
+      </div>
+    </section>
+   <Footer />
     
     </>
   );

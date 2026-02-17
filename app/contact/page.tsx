@@ -1,17 +1,73 @@
+"use client";
 import Link from 'next/link';
 import Image from 'next/image';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Contact() {
+  const pathname = usePathname();
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+       
+        setIsVisible(false);
+      } else {
+      
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", controlNavbar);
+    return () => window.removeEventListener("scroll", controlNavbar);
+  }, [lastScrollY]);
+
+
+  const isActive = (path: string) => pathname === path;
   return (
 <>
 
       {/* Navigation Header */}
-     <Navbar />
+  <nav 
+      className={`fixed top-0 left-0 w-full px-6 md:px-10 flex items-center justify-between font-sans h-16 z-50 transition-transform duration-300 bg-[#cdc9d3] backdrop-blur-md ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <Link href="/" className="text-xl md:text-2xl font-bold text-[#243a1f] cursor-pointer">
+        Lilac template
+      </Link>
+      
+      <div className="flex items-center gap-6 md:gap-10 text-[#243a1f] font-medium">
+        <Link 
+          href="/blog" 
+          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b-1 ${
+            isActive("/blog") ? "border-[#243a1f]" : "border-transparent"
+          }`}
+        >
+          Blog
+        </Link>
+        
+        <Link 
+          href="/contact" 
+          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b${
+            isActive("/contact") ? "border-[#243a1f]" : "border-transparent"
+          }`}
+        >
+          Contact
+        </Link>
+      </div>
+    </nav>
    
        <section className="bg-[#cdc9d3] min-h-screen py-16 px-6 md:px-20 lg:px-22 sm:flex flex flex-col justify-center font-sans text-[#1a2e1a]">
-      <div className="max-w-7xl bg-green-400mx-auto w-full">
+      <div className="max-w-7xl mt-20 bg-green-400mx-auto w-full">
        
         {/* Header Section */}
         <h1 className="text-5xl md:text-7xl sm:text-left flex justify-center lg:justify-start w-full text-left font-serif mb-5 sm:mb-10 tracking-tight">
@@ -31,9 +87,9 @@ export default function Contact() {
             </div>
 
             {/* Image Composition */}
-            <div className="relative flex justify-center items-center lg:block w-auto md:pl-12 mt-2 pt-1">
+            <div className="relative flex justify-center items-center lg:block w-auto md:pl-12 lg:mt-[-10px] mt-2 pt-1">
               {/* Main Arched Image */}
-               <div className="relative w-[180px] h-[250px] md:w-[220px] md:h-[360px] overflow-hidden rounded-t-full shadow-md">
+               <div className="relative w-[180px] h-[250px] md:w-[200px] md:h-[320px] overflow-hidden rounded-t-full shadow-md">
                            <Image 
                              src="/lilac-image-8.webp" 
                              alt="Person holding lilacs"
@@ -43,7 +99,7 @@ export default function Contact() {
                          </div>
               
               {/* Secondary Circular Image */}
-              <div className="absolute hidden lg:block -bottom-10 left-32 md:left-40 w-40 h-40 md:w-36 md:h-36 rounded-full border-[#cdc9d3] overflow-hidden bg-gray-100">
+              <div className="absolute hidden lg:block -bottom-0 left-32 md:left-50 w-40 h-40 md:w-36 md:h-36 rounded-full border-[#cdc9d3] overflow-hidden bg-gray-100">
                 <Image
                   src="/lilac-image-6.webp" 
                   alt="Close up flowers" 
@@ -194,7 +250,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
-    <Footer />
+     <Footer/>
     </>
   );
 }

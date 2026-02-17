@@ -3,10 +3,10 @@ import Link from 'next/link';
 export default function () {
     return (
         <>
-         <footer className="w-full bg-[#f5f2e9] text-[#2d3e1d] py-16 px-8 md:px-20 font-sans">
+         <footer className="w-full bg-[#f5f2e9] text-[#2d3e1d] pt-16  font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Top Section: Information Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+        <div className="grid md:px-20  grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           
           {/* Brand & Address */}
           <div>
@@ -42,15 +42,15 @@ export default function () {
         </div>
 
         {/* Bottom Section: Legal & Credits */}
-        <div className="border-t border-[#dcd9ce] pt-12 text-center text-sm space-y-4">
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+        <div className="border-t bg-[#EBE7E0] border-[#dcd9ce] py-8 w-full text-center text-sm space-y-4">
+          <div className="flex flex-wrap mb-[-4px] justify-center gap-x-2 gap-y-2">
             <Link href="/privacy" className="underline">Privacy & Cookies Policy</Link>
             <Link href="/estimate" className="underline">Good Faith Estimate</Link>
             <Link href="/terms" className="underline">Website Terms & Conditions</Link>
             <Link href="/disclaimer" className="underline">Disclaimer</Link>
           </div>
           
-          <p className="pt-4">
+          <p className="pt-4 mb-[22px]">
             Website Template Credits: <a href="#" className="underline">Go Bloom Creative</a>
           </p>
           
