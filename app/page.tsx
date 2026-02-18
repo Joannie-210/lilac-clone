@@ -100,53 +100,40 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
      <Navbar />
 
       {/* HERO SECTION */}
-      <section className="px-6 md:px-10 py-12 md:py-20 flex w-full bg-[#FDF2F2] items-center justify-center font-sans">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 max-w-7xl w-full">
-          <div className="relative w-full max-w-112.5 aspect-3/4">
+      <section className="bg-brand-forest flex h-220 md:h-200  pt-10 w-full">
+      <div className=" w-full md:gap-15 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center px-6 ">
+        
+        {/* LEFT IMAGE */}
+        <div className="flex justify-center lg:w-130">
+          <div className="relative w-[280px] sm:w-[360px] md:w-[450px] aspect-[3/4] overflow-hidden rounded-t-[200px]">
             <Image
-              src="/lilac-image-1.webp"
-              alt="Lilac Template"
+              src="/lilac-image-8.webp"   // replace with your image
+              alt="Lilac bouquet"
               fill
-              className="rounded-t-full object-cover shadow-lg"
+              className="object-cover"
               priority
             />
           </div>
-          <div className="max-w-xl text-center lg:text-left flex flex-col items-center lg:items-start gap-6">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl leading-tight font-serif text-[#243a1f]">
-              Live your life in <span className="italic">full bloom</span>
-            </h1>
-          </div>
         </div>
-      </section>
 
-      {/* SPLIT CONTENT SECTION */}
-      <section className="min-h-[80vh] bg-[#ebe7df] flex flex-col lg:flex-row items-stretch">
-        <div className="w-full lg:w-1/2 px-8 py-16 md:px-24 flex flex-col justify-center">
-          <h2 className="text-4xl md:text-6xl font-semibold text-[#243a1f] mb-8">
-            Live a fulfilling life.
-          </h2>
-          <p className="text-[#243a1f] text-lg mb-6 max-w-xl leading-relaxed">
-            Life can be challenging—especially when you're trying to balance your
-            personal and professional life.
+        {/* RIGHT CONTENT */}
+        <div className="-mt-20 lg:pl-10 lg:mt-0 text-center lg:text-left">
+          <h1 className="text-[#243a1f] font-serif text-4xl  sm:text-5xl md:text-6xl lg:text-6xl leading-tight tracking-tight">
+            Live your life
+            <br />
+            in full bloom
+          </h1>
+
+          <p className="mt-6 text-[#243a1f]/80 text-base md:text-lg">
+            Therapy for Adults in Minneapolis, MN.
           </p>
-          <p className="text-[#243a1f] text-lg mb-10 max-w-xl leading-relaxed">
-            It's easy to feel like you're alone in facing these challenges, but I
-            want you to know that I'm here to help.
-          </p>
-          <button className="group flex items-center gap-3 text-[#243a1f] font-bold border-t-2 border-[#243a1f] pt-4 w-fit tracking-tighter">
-            GET IN TOUCH
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+
+          <button className="mt-8 lg:ml-10 px-8 py-3 border border-[#243a1f] text-[#243a1f] text-sm tracking-wide uppercase hover:bg-[#243a1f] hover:text-white transition-all duration-300">
+            Connect With Me →
           </button>
         </div>
-        <div className="hidden lg:block w-1/2 relative min-h-125">
-          <Image
-            src="/lilac-image-2.webp"
-            alt="Lifestyle flatlay"
-            fill
-            className="object-cover"
-          />
-        </div>
-      </section>
+      </div>
+    </section>
 
       {/* SPECIALTIES GRID */}
       <section className="bg-[#fbf6ef] py-24 px-6 md:px-12">
@@ -177,7 +164,72 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
           ))}
         </div>
       </section>
+<section className="flex flex-col md:flex-row min-h-[600px] w-full overflow-hidden">
+      
+      {/* Left Column: Full-height Image */}
+      <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-0">
+        <Image
+        fill
+          src="/lilac-image-2.webp" 
+          alt="Woman resting head back with eyes closed"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      </div>
 
+      {/* Right Column: Content Area */}
+      <div className="w-full md:w-1/2 bg-[#C3C1CC] flex flex-col">
+        {/* Text Container */}
+        <div className="flex-grow p-8 md:p-16 lg:p-20 flex flex-col justify-center">
+          <h2 className="text-[#2D472C] text-4xl md:text-5xl font-semibold leading-tight mb-8">
+            You don’t have to do this
+            all alone.
+          </h2>
+
+          <p className="text-[#2D472C] text-lg mb-8 font-medium">
+            If you are facing any of these, there’s hope:
+          </p>
+
+          <ul className="space-y-4 text-[#2D472C] text-md md:text-lg mb-10">
+            <li className="flex items-start">
+              <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#2D472C] shrink-0" />
+              Persistent feelings of sadness or hopelessness
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#2D472C] shrink-0" />
+              Trouble focusing or making decisions
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#2D472C] shrink-0" />
+              Difficulty maintaining relationships
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#2D472C] shrink-0" />
+              Feeling constantly exhausted or unmotivated
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#2D472C] shrink-0" />
+              A pervasive sense of being overwhelmed
+            </li>
+          </ul>
+
+          <p className="text-[#2D472C] text-lg leading-relaxed max-w-lg">
+            With empathy and guidance, we’ll work together to navigate the 
+            challenges life throws your way.
+          </p>
+        </div>
+
+        {/* Footer Link / Border Section */}
+        <div className="border-t  border-[#2D472C] p-6 flex justify-center">
+          <a 
+            href="#work-with-me" 
+            className="text-[#2D472C] text-xs uppercase tracking-[0.2em] font-bold hover:opacity-70 transition-opacity flex items-center"
+          >
+            Work with me <span className="ml-2 text-lg">→</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
       {/* BIO SECTION (Lilac) */}
       <section className="bg-[#EBE7E0] min-h-175 flex items-center px-6 py-20 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -222,16 +274,19 @@ const PlusMinusIconTwo = ({ isOpen }: { isOpen: boolean }) => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         
         {/* Left Side: Arched Image */}
-        <div className="relative w-100 h-145 max-w-125 mx-auto lg:mx-0">
-          <div className="relative w-full h-full overflow-hidden rounded-t-full shadow-sm">
-            <Image
-              src="/lilac-image-7.webp" 
-              alt="Decorative dried flowers"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+       <div className="relative w-full max-w-[420px] mx-auto lg:mx-0">
+  <div className="relative w-full aspect-[3/4] overflow-hidden rounded-t-[200px] shadow-sm">
+    <Image
+      src="/lilac-image-7.webp"
+      alt="Decorative dried flowers"
+      fill
+      sizes="(max-width: 640px) 100vw, 420px"
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
+
 
         {/* Right Side: FAQ Content */}
         <div className="flex flex-col">

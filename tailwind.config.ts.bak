@@ -1,0 +1,24 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+   "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+  "./components/**/*.{js,ts,jsx,tsx,mdx}", 
+  "./src/**/*.{js,ts,jsx,tsx,mdx}",
+
+  
+  ],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          canvas: '#F9F5F2',
+          forest: '#2D472C',
+          lavender: '#C3C1CC',
+          sand: '#CDC4BA',
+          accent: '#B5836D',
+        },
+      },
+    },
+  },
+};

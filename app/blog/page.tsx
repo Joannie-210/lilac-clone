@@ -18,6 +18,7 @@ export default function Blog() {
  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -43,35 +44,44 @@ export default function Blog() {
 
   return (
     <>
-   <nav 
-      className={`fixed top-0 left-0 w-full px-6 md:px-10 flex items-center justify-between font-sans h-20 z-50 transition-transform duration-300 bg-[#FDF8F3]/80 backdrop-blur-md ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <Link href="/" className="text-xl md:text-2xl font-bold text-[#243a1f] cursor-pointer">
-        Lilac template
-      </Link>
-      
-      <div className="flex items-center gap-6 md:gap-10 text-[#243a1f] font-medium">
-        <Link 
-          href="/blog" 
-          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b-2 ${
-            isActive("/blog") ? "border-[#243a1f]" : "border-transparent"
-          }`}
+    <nav
+        className={`fixed top-0 left-0 w-full px-6 md:px-12 flex items-center justify-between font-sans h-24 z-50 transition-transform duration-500 bg-brand-canvas/90 backdrop-blur-sm ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        {/* Left Side: Minimal Two-Line Hamburger Menu */}
+        <button 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="flex flex-col gap-1.5 w-8 group cursor-pointer"
+          aria-label="Toggle Menu"
         >
-          Blog
+          <span className="h-[1.5px] w-full bg-brand-forest transition-all group-hover:w-3/4"></span>
+          <span className="h-[1.5px] w-full bg-brand-forest transition-all"></span>
+        </button>
+
+        {/* Right Side: Title */}
+        <Link 
+          href="/" 
+          className="text-2xl md:text-3xl font-normal text-brand-forest tracking-tight"
+        >
+          Lilac Template
         </Link>
+      </nav>
+
+      {/* Basic Mobile/Overlay Menu (Shown when hamburger is clicked) */}
+      <div className={`fixed inset-0 bg-brand-canvas z-[60] transition-transform duration-500 flex flex-col items-center justify-center gap-8 ${
+        isMenuOpen ? "translate-x-0" : "translate-x-full"
+      }`}>
+        <button 
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute top-10 left-6 text-brand-forest uppercase tracking-widest text-sm"
+        >
+          Close [×]
+        </button>
         
-        <Link 
-          href="/contact" 
-          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b-2 ${
-            isActive("/contact") ? "border-[#243a1f]" : "border-transparent"
-          }`}
-        >
-          Contact
-        </Link>
+        <Link href="/blog" onClick={() => setIsMenuOpen(false)} className="text-4xl text-brand-forest">Blog</Link>
+        <Link href="/contact" onClick={() => setIsMenuOpen(false)} className="text-4xl text-brand-forest">Contact</Link>
       </div>
-    </nav>
     <section className="min-h-screen lg:pt-25 flex items-center justify-center px-9 py-8">
       <div className="max-w-6xl  md:gap-5 w-full grid grid-cols-1 md:grid-cols-2  items-center">
         
@@ -131,7 +141,7 @@ export default function Blog() {
       
       <Link 
         href={`/blog/${post.id}`}
-        className="w-fit text-sm font-bold mt-2 mb-10 md:mt-10 lg:mb-13 uppercase tracking-widest text-[#1D3319] border-b-2 border-[#1D3319] pb-1 hover:opacity-60 transition-opacity"
+        className="w-fit text-sm font-bold mt-2 mb-10 md:mt-10 lg:mb-2 uppercase tracking-widest text-[#1D3319] border-b-2 border-[#1D3319] pb-1 hover:opacity-60 transition-opacity"
       >
         Read More
       </Link>

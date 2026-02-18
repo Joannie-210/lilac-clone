@@ -1,3 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  /* This replaces the 'extend' section in your old config */
+  --color-brand-canvas: #F9F5F2;
+  --color-brand-forest: #2D472C;
+  --color-brand-lavender: #C3C1CC;
+  --color-brand-sand: #CDC4BA;
+  --color-brand-accent: #B5836D;
+}
+
 @font-face {
   font-family: 'Gopher';
   src: url('/fonts/d.woff') format('woff'),;

@@ -9,7 +9,7 @@ export default function () {
         <div className="grid md:px-20  grid-cols-1 md:grid-cols-3 gap-12 mb-20">
           
           {/* Brand & Address */}
-          <div>
+          <div className='bg-red-4009'>
             <h2 className="text-4xl font-normal mb-6">Lilac Template</h2>
             <div className="space-y-1 text-lg">
               <p>123 Example Road</p>

@@ -9,7 +9,7 @@ export default function Contact() {
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const controlNavbar = () => {
@@ -37,7 +37,7 @@ export default function Contact() {
 
       {/* Navigation Header */}
   <nav 
-      className={`fixed top-0 left-0 w-full px-6 md:px-10 flex items-center justify-between font-sans h-16 z-50 transition-transform duration-300 bg-[#cdc9d3] backdrop-blur-md ${
+      className={` canvas fixed top-0 left-0 w-full px-6 md:px-10 flex items-center justify-between font-sans h-20 z-50 transition-transform duration-300 bg-[#FDF8F3]/80 backdrop-blur-md ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -48,7 +48,7 @@ export default function Contact() {
       <div className="flex items-center gap-6 md:gap-10 text-[#243a1f] font-medium">
         <Link 
           href="/blog" 
-          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b ${
+          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b-2 ${
             isActive("/blog") ? "border-[#243a1f]" : "border-transparent"
           }`}
         >
@@ -57,7 +57,7 @@ export default function Contact() {
         
         <Link 
           href="/contact" 
-          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b${
+          className={`cursor-pointer hover:opacity-70 transition-all pb-1 border-b-2 ${
             isActive("/contact") ? "border-[#243a1f]" : "border-transparent"
           }`}
         >
@@ -66,7 +66,7 @@ export default function Contact() {
       </div>
     </nav>
    
-       <section className="bg-[#cdc9d3] min-h-screen py-16 px-6 md:px-20 lg:px-22 sm:flex flex flex-col justify-center font-sans text-[#1a2e1a]">
+       <section className="canvas min-h-screen py-16 px-6 md:px-20 lg:px-22 sm:flex flex flex-col justify-center font-sans text-[#1a2e1a]">
       <div className="max-w-7xl mt-20 bg-green-400mx-auto w-full">
        
         {/* Header Section */}
@@ -161,7 +161,7 @@ export default function Contact() {
       <p className='font-bold text-lg'>acuity:scheduling</p>
     </section>
 
-     <section className="h-130 bg-[#7f7b45] text-white flex items-center">
+     <section className="h-180 md:h-130 bg-[#7f7b45] text-white flex items-center">
       <div className="mx-auto w-full max-w-7xl px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
