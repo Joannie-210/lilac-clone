@@ -31,18 +31,18 @@ export default function Home() {
   const specialties = [
     {
       title: "Anxiety & Panic",
-      description: "Whether it's constant worry, racing thoughts, or panic attacks, we'll work together to understand what's driving your anxiety and build lasting relief.",
-      image: "/lilac-image-3.webp",
+      description: "Whether it's constant worry, or panic attacks, we'll work together to understand what's driving your anxiety and build lasting relief.",
+      image: "/anxiety.jfif",
     },
     {
       title: "Trauma & EMDR",
       description: "I work with single-incident trauma and complex, long-standing patterns using carefully paced, evidence-based approaches including EMDR.",
-      image: "/lilac-image-4.webp",
+      image: "/trauma.jfif",
     },
     {
       title: "Burnout & Perfectionism",
-      description: "For high-achieving professionals and creatives who feel disconnected after years of pushing through stress—therapy as a space to slow down and reconnect.",
-      image: "/lilac-image-5.webp",
+      description: "For high-achieving professionals who feel detached after years of pushing through stress—therapy as a space to slow down and reconnect.",
+      image: "/burnout.jfif",
     },
   ];
 
@@ -114,12 +114,12 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION — Soft Lilac light (unchanged) */}
-      <section className="bg-[#EDE8F5] flex h-220 md:h-250 lg:h-180 pt-10 w-full">
-        <div className="w-full md:gap-15 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center px-6">
+       <section className="bg-[#EDE8F5] flex h-220 md:h-240 lg:h-250 w-full">
+        <div className="w-full  md:gap-15 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center px-6">
           
           {/* LEFT IMAGE */}
-         <div className="flex justify-center lg:w-130">
-  <div className="relative w-[280px] sm:w-[360px] md:w-[435px] aspect-[3/4] overflow-hidden rounded-t-[200px]">
+         <div className="flex justify-center lg:mt-10 lg:w-150">
+  <div className="relative w-[280px] mt-10 h-100 sm:w-[360px] lg:h-[880px] md:w-[520px] lg:mt-10 overflow-hidden rounded-t-full">
     <Image
       src="/calm.jfif"
       alt="A picture of lady sitting on a bench"
@@ -131,16 +131,16 @@ export default function Home() {
   </div>
 </div>
           {/* RIGHT CONTENT */}
-          <div className="md:-mt-20 lg:mt-10 lg:-ml-5 text-center lg:text-left">
-            <h1 className="text-[#6B3F7A] font-brico text-4xl  md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight">
+          <div className="md:-mt-20 -lg:mt-25  text-center lg:text-left">
+            <h1 className="text-[#6B3F7A] font-brico text-4xl  md:text-5xl lg:text-[75px] leading-tight tracking-tight">
               Find calm
               <br />
               within yourself
             </h1>
-            <p className="mt-6 text-[#2E2535]/80 text-base md:text-lg">
+            <p className="mt-6 text-[#2E2535]/80 text-base md:text-lg ">
               Therapy for Adults in Santa Monica, CA.
             </p>
-            <button className="mt-8 lg:ml-20 px-7 cursor-pointer py-3 border border-[#6B3F7A] text-[#6B3F7A] text-sm tracking-wide uppercase hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
+            <button className="mt-8 lg:ml-25 px-12 cursor-pointer py-3 border border-[#6B3F7A] text-[#6B3F7A] text-md tracking-wide uppercase hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
               Connect With Me →
             </button>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* TWO-COLUMN SECTION — Faded Sage mid (was Warm Stone mid) */}
-      <section className="flex flex-col md:flex-row w-full min-h-[600px] overflow-hidden font-sans">
+      <section className="flex flex-col md:flex-row w-full min-h-[700px] overflow-hidden font-sans">
         
         <div className="w-full md:w-1/2 bg-[#f5fff5] flex flex-col">
           <div className="flex-grow p-10 md:p-20 lg:py-24 lg:px-10 flex flex-col justify-center">
@@ -166,7 +166,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <button className="border-t cursor-pointer hover:text-white hover:bg-[#154406] border-[#2E2535]/10 p-6 flex justify-center">
+          <button className="border-t cursor-pointer hover:text-white hover:bg-[#154406] border-gray-400 p-5 flex justify-center">
             <a 
               href="#contact" 
               className="grouptext-white flex font-semibold items-center gap-2 text-sm uppercase tracking-widest  transition-opacity"
@@ -179,26 +179,27 @@ export default function Home() {
 
         <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-0">
           <Image
-            src="/your-image-path.jpg"
-            alt="Flat lay with coffee, lilacs, and a notebook"
+            src="/ease.jpg"
+            alt="Lady smiling while holding a cup of tea"
             fill
             priority
             className="object-cover object-center"
           />
+           
         </div>
         
       </section>
 
       {/* SPECIALTIES GRID — Soft Lilac muted bg, Faded Sage cards (unchanged lilac bg, sage cards) */}
-      <section className="bg-[#F2F6F2]  py-24 px-6 md:px-12">
+      <section className="bg-[#F2F6F2]  pt-30 pb-20 px-6 md:px-10">
         <h2 className="text-center text-4xl md:text-5xl font-semibold text-[#2E2535] mb-20">
           My Specialties
         </h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
           {specialties.map((item) => (
             <div
               key={item.title}
-              className="border border-[#A8BFA8]/40 bg-white p-10 flex flex-col items-start"
+              className="border-2 border-gray-300 bg-white px-5 pt-5 pb-4 flex flex-col items-start"
             >
               <h3 className="text-2xl font-bold text-[#2E2535] mb-6">
                 {item.title}
@@ -206,34 +207,36 @@ export default function Home() {
               <p className="text-[#2E2535] mb-12 text-left leading-relaxed">
                 {item.description}
               </p>
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden mx-auto">
+              <div className="relative w-48 h-48 lg:w-70 lg:h-70 md:w-56 md:h-56 rounded-full overflow-hidden mx-auto">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
                   className="object-cover"
                 />
+                 <div className="absolute inset-0 bg-black/10" />
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* HOPE SECTION — Soft Lilac mid (unchanged) */}
+      {/* HOPE SECTION */}
       <section className="flex flex-col md:flex-row min-h-[600px] w-full overflow-hidden">
         
         <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-0">
           <Image
             fill
-            src="/lilac-image-2.webp" 
+            src="/relaxed.jfif" 
             alt="Woman resting head back with eyes closed"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
+          
         </div>
 
         <div className="w-full md:w-1/2 bg-[#D9D0EE] flex flex-col">
-          <div className="flex-grow p-8 md:p-16 lg:p-20 flex flex-col justify-center">
-            <h2 className="text-[#2E2535] text-4xl md:text-5xl font-semibold leading-tight mb-8">
+          <div className="flex-grow p-8 md:p-16 lg:pt-40 flex flex-col justify-center">
+            <h2 className="text-[#2E2535] text-4xl md:text-5xl leading-tight mb-8">
               You don't have to do this
               all alone.
             </h2>
@@ -267,12 +270,12 @@ export default function Home() {
               that feels safe and sustainable for you.
             </p>
           </div>
-          <div className="border-t border-[#2E2535]/20 p-6 flex justify-center">
+          <div className="border-t border-[#2E2535]/20 hover:bg-[#6B3F7A] text-white hover:text-white p-4 flex justify-center">
             <a 
               href="#work-with-me" 
-              className="text-[#2E2535] text-xs uppercase tracking-[0.2em] font-bold hover:opacity-70 transition-opacity flex items-center"
+              className="text-[#2E2535] text-md hover:text-white uppercase tracking-[0.2em] font-semibold hover:opacity-70 transition-opacity flex items-center"
             >
-              Work with me <span className="ml-2 text-lg">→</span>
+              Let's work together <span className="ml-2 text-lg">→</span>
             </a>
           </div>
         </div>
@@ -280,19 +283,19 @@ export default function Home() {
       </section>
 
       {/* BIO SECTION — Faded Sage light (was Warm Stone light) */}
-      <section className="bg-[#f5fff5] min-h-175 flex items-center px-6 py-20 md:px-12 lg:px-24">
+      <section className="bg-[#f5fff5] min-h-175 lg:[1000px] flex items-center px-6 py-20 lg:pt-25 lg:pb-40 md:px-12 lg:px-25">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div className="space-y-8 order-2 lg:order-1">
-            <h2 className="text-5xl md:text-7xl font-serif text-[#6B3F7A] font-semibold">
+          <div className="space-y-8 lg:w-170 order-2 lg:order-1">
+            <h2 className="text-5xl md:text-6xl font-serif text-[#6B3F7A] ">
               Hi, I'm Dr. Maya.
             </h2>
-            <p className="text-[#2E2535] text-lg md:text-xl leading-relaxed max-w-lg">
+            <p className="text-[#2E2535] text-lg md:text-xl leading-relaxed max-w-xl">
               I'm a licensed clinical psychologist based in Santa Monica, CA. I specialize in 
               anxiety, trauma, and burnout—helping thoughtful, high-achieving adults find relief, 
               develop insight, and build a stronger relationship with themselves over time.
             </p>
-            <button className="group flex items-center gap-4 border border-[#6B3F7A] px-10 py-4 text-xs tracking-widest uppercase text-[#6B3F7A] font-bold hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
-              Let's Chat
+            <button className="group cursor-pointer mx-auto lg:mt-20 flex items-center gap-4 border border-[#6B3F7A] px-10 py-4 text-sm tracking-widest uppercase text-[#6B3F7A] font-bold hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
+              Let's Talk
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -300,7 +303,7 @@ export default function Home() {
           <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
             <div className="relative w-75 h-112.5 md:w-112.5 md:h-162.5 overflow-hidden rounded-t-full shadow-md">
               <Image 
-                src="/lilac-image-1.webp" 
+                src="/MR.png" 
                 alt="Person holding lilacs"
                 fill
                 className="object-cover"
@@ -308,7 +311,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-10 right-0 md:-right-10 w-40 h-40 md:w-72 md:h-72 rounded-full overflow-hidden shadow-xl">
               <Image 
-                src="/lilac-image-6.webp" 
+                src="/office1.jpeg" 
                 alt="Close up detail"
                 fill
                 className="object-cover"
@@ -320,76 +323,89 @@ export default function Home() {
 
       {/* OFFICE SECTION — Soft Lilac light (unchanged) */}
       <section className="bg-[#EDE8F5] py-20 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-medium text-[#2E2535] mb-4">
-              Our Office
-            </h2>
-            <p className="text-[#4A5A4A] leading-relaxed">
-              Dr. Maya Reynolds' Santa Monica practice is designed to feel calm, grounded, and
-              welcoming—a quiet, private space with natural light and a comfortable, uncluttered
-              environment where you can slow down and focus fully on your healing.
-            </p>
-          </div>
+  <div className="max-w-6xl mx-auto">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image
-                  src="/lilac-image-1.webp"
-                  alt="Therapy office interior with warm lighting"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image
-                  src="/lilac-image-1.webp"
-                  alt="Comfortable counseling space with seating"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative h-64 col-span-2 rounded-2xl overflow-hidden">
-                <Image
-                  src="/lilac-image-1.webp"
-                  alt="Private therapy room designed for comfort and safety"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+    {/* Section Header */}
+    <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6 border-b border-[#BFB2E0] pb-10">
+      <div>
+        <p className="text-xs uppercase tracking-[0.25em] text-[#6B3F7A] mb-3 font-medium">Santa Monica, CA</p>
+        <h2 className="text-5xl md:text-6xl font-serif text-[#2E2535] leading-tight">
+          Our Office
+        </h2>
+      </div>
+      <p className="text-[#4A5A4A] text-lg leading-relaxed max-w-sm text-base md:text-right">
+        A quiet, private space with natural light—designed to help you slow down and feel at ease the moment you arrive.
+      </p>
+    </div>
 
-            <div className="text-[#4A5A4A] space-y-6 leading-relaxed">
-              <p>
-                The office offers a thoughtfully arranged environment that prioritizes comfort, 
-                privacy, and emotional safety. Soft lighting, natural textures, and comfortable 
-                seating create a setting that feels both professional and personal. Clients 
-                often share that the space itself helps them feel more at ease when they arrive.
-              </p>
-              <p>
-                Sessions are available in person from the Santa Monica office, with secure 
-                telehealth options for clients located anywhere in California. Whether you're 
-                new to therapy or continuing ongoing work, the space is designed to support 
-                openness, reflection, and trust.
-              </p>
-              <p className="text-sm text-[#6E7E6E]">
-                Located at 123th Street 45 W, Santa Monica, CA 90401—a discreet, 
-                easily accessible setting to ensure confidentiality and peace of mind.
-              </p>
-            </div>
-          </div>
+    {/* Main Grid */}
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch mb-12">
+
+      {/* Tall left image */}
+      <div className="relative lg:col-span-2 min-h-[420px] lg:min-h-0 rounded-2xl overflow-hidden">
+        <Image
+          src="/office2.jpeg"
+          alt="Therapy office interior with warm lighting"
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      {/* Right stacked images */}
+      <div className="lg:col-span-3 grid grid-rows-2 gap-6">
+        <div className="relative rounded-2xl overflow-hidden min-h-[220px]">
+          <Image
+            src="/office3.jfif"
+            alt="Comfortable counseling space with seating"
+            fill
+            className="object-cover"
+          />
         </div>
-      </section>
+        <div className="relative rounded-2xl overflow-hidden min-h-[220px]">
+          <Image
+            src="/office1.jpeg"
+            alt="Private therapy room designed for comfort and safety"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
 
-      {/* FAQ SECTION — Faded Sage muted bg (was Warm Stone muted bg) */}
+    </div>
+
+    {/* Bottom text row */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-10 border-t border-[#BFB2E0]">
+      <div>
+        <p className="text-xs uppercase tracking-[0.2em] text-[#6B3F7A] mb-3 font-medium">The Space</p>
+        <p className="text-[#4A5A4A] leading-relaxed text-lg">
+          Soft lighting, natural textures, and comfortable seating create a setting that feels both professional and personal—a place where you can show up fully.
+        </p>
+      </div>
+      <div>
+        <p className="text-xs uppercase tracking-[0.2em] text-[#6B3F7A] mb-3 font-medium">In-Person & Telehealth</p>
+      <p className="text-[#4A5A4A] leading-relaxed text-lg">
+          Sessions are available in person from the Santa Monica office, with secure telehealth options for clients located anywhere in California.
+        </p>
+      </div>
+      <div>
+        <p className="text-xs uppercase tracking-[0.2em] text-[#6B3F7A] mb-3 font-medium">Location</p>
+        <p className="text-[#4A5A4A] leading-relaxed text-lg">
+          123th Street 45 W, Santa Monica, CA 90401. Discreet and easily accessible, designed with your confidentiality and peace of mind in mind.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      {/* FAQ SECTION — Fade d Sage muted bg (was Warm Stone muted bg)*/}
       <section className="bg-[#F2F6F2] py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           
-          <div className="relative w-full max-w-[420px] mx-auto lg:mx-0">
+          <div className="relative lg:ml-10 w-full max-w-[420px] mx-auto lg:mx-0">
             <div className="relative w-full aspect-[3/4] overflow-hidden rounded-t-[200px] shadow-sm">
               <Image
-                src="/lilac-image-7.webp"
+                src="/faqss.jfif"
                 alt="Decorative dried flowers"
                 fill
                 sizes="(max-width: 640px) 100vw, 420px"
@@ -399,7 +415,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex lg:w-145 flex-col">
             <h2 className="text-4xl md:text-5xl font-semibold text-[#2E2535] mb-12">
               FAQs
             </h2>
@@ -411,12 +427,12 @@ export default function Home() {
                   <div key={index} className="border-b border-[#A8BFA8]">
                     <button
                       onClick={() => setOpenIndex(isOpen ? null : index)}
-                      className="w-full py-8 flex items-center text-left"
+                      className="w-full py-3 cursor-pointer flex items-center text-left"
                     >
                       <div className="mr-6">
                         <PlusMinusIcon isOpen={isOpen} />
                       </div>
-                      <span className="text-xl md:text-2xl font-medium text-[#2E2535]">
+                      <span className="text-xl md:text-2xl lg:text-[42px] font-medium text-[#2E2535]">
                         {faq.question}
                       </span>
                     </button>
@@ -438,9 +454,9 @@ export default function Home() {
       </section>
 
       {/* PROFESSIONAL BACKGROUND — Faded Sage light (was Warm Stone light) */}
-      <section className="bg-[#E4EDE4] py-10 h-auto px-6">
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-4xl md:text-4xl font-serif text-[#2E2535] font-semibold text-center mb-8">
+      <section className="bg-[#E4EDE4] py-24 h-auto px-6">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-4xl lg:text-[45px] font-serif text-[#2E2535] text-center mb-8">
             My Professional Background
           </h2>
 
@@ -448,10 +464,10 @@ export default function Home() {
             {backgroundItems.map((item, index) => {
               const isOpen = openSecondIndex === index;
               return (
-                <div key={index} className="border-b-2 border-[#A8BFA8]">
+                <div key={index} className="border-b-2  border-gray-500">
                   <button
                     onClick={() => setOpenSecondIndex(isOpen ? null : index)}
-                    className="w-full py-4 flex items-center justify-between text-left group"
+                    className="w-full py-4 cursor-pointer flex items-center justify-between text-left group"
                   >
                     <span className="text-xl md:text-2xl font-medium text-[#2E2535] tracking-tight">
                       {item.title}
@@ -463,7 +479,7 @@ export default function Home() {
                       isOpen ? 'max-h-60 pb-8 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <p className="text-[#2E2535]/80 text-lg leading-relaxed">
+                    <p className="text-[#2E2535]/80 w-full lg:w-100 mx-auto text-xl leading-relaxed">
                       {item.content}
                     </p>
                   </div>
@@ -474,7 +490,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA BANNER — Plum accent (unchanged) */}
+      {/* CTA BANNER */}
       <section className="bg-[#6B3F7A] py-14 px-6 text-center">
         <div className="max-w-2xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-5xl font-serif text-white">Get started today.</h2>
@@ -483,7 +499,7 @@ export default function Home() {
             <p>Reach out to schedule a consultation. I look forward to hearing from you and exploring whether we'd be a good fit.</p>
           </div>
           <div className="pt-8">
-            <button className="border border-white text-white px-10 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-[#6B3F7A] transition-all duration-300">
+            <button className="border cursor-pointer border-white text-white px-10 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-[#6B3F7A] transition-all duration-300">
               Get in Touch &rarr;
             </button>
           </div>
@@ -492,56 +508,66 @@ export default function Home() {
 
       {/* FOOTER — Faded Sage muted bg (was Warm Stone muted bg) */}
       <footer className="w-full bg-[#F2F6F2] text-[#2E2535] pt-16 font-sans">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:px-20 grid-cols-1 md:grid-cols-3 gap-12 mb-20">
-            
-            <div>
-              <h2 className="text-4xl font-normal mb-6">Dr. Maya Reynolds</h2>
-              <div className="space-y-1 text-lg">
-                <p>123th Street 45 W</p>
-                <p>Santa Monica, CA 90401</p>
-                <div className="pt-4">
-                  <a href="mailto:email@example.com" className="underline block">email@example.com</a>
-                  <a href="tel:5555555555" className="underline block">(555) 555-5555</a>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-normal mb-6">Hours</h3>
-              <div className="text-lg">
-                <p>Monday – Friday</p>
-                <p>10am – 6pm</p>
-              </div>
-            </div>
-
-            <div className="md:text-right">
-              <h3 className="text-3xl font-normal mb-6">Find</h3>
-              <nav className="flex flex-col space-y-2 text-lg items-start md:items-end">
-                <Link href="/" className="underline decoration-1 underline-offset-4">Home</Link>
-                <Link href="/contact" className="underline decoration-1 underline-offset-4">Contact</Link>
-                <Link href="/blog" className="underline decoration-1 underline-offset-4">Blog</Link>
-              </nav>
-            </div>
-          </div>
-
-          {/* Footer bottom — Soft Lilac light (unchanged) */}
-          <div className="border-t bg-[#EDE8F5] border-[#D9D0EE] py-8 w-full text-center text-sm space-y-4">
-            <div className="flex flex-wrap mb-1 justify-center gap-x-2 gap-y-2">
-              <Link href="/privacy" className="underline">Privacy & Cookies Policy</Link>
-              <Link href="/estimate" className="underline">Good Faith Estimate</Link>
-              <Link href="/terms" className="underline">Website Terms & Conditions</Link>
-              <Link href="/disclaimer" className="underline">Disclaimer</Link>
-            </div>
-            <p className="pt-4 mb-5.5">
-              Website Template Credits: <a href="#" className="underline">Go Bloom Creative</a>
-            </p>
-            <p className="pt-8">
-              All Rights Reserved © 2024 Dr. Maya Reynolds, PsyD.
-            </p>
+  <div className="max-w-8xl mx-auto px-5 md:px-12">
+    
+    {/* 4-Column Grid System */}
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-20">
+      
+      {/* Column 1 & 2: Dr. Maya Reynolds (Spans half the footer) */}
+      <div className="md:col-span-2">
+        <h2 className="text-4xl font-normal mb-6">Dr. Maya Reynolds</h2>
+        <div className="space-y-1 text-lg">
+          <p>123th Street 45 W</p>
+          <p>Santa Monica, CA 90401</p>
+          <div className="pt-4 flex flex-col">
+            <a href="mailto:email@example.com" className="underline underline-offset-4 w-fit">email@example.com</a>
+            <a href="tel:5555555555" className="underline underline-offset-4 w-fit">(555) 555-5555</a>
           </div>
         </div>
-      </footer>
+      </div>
+
+      {/* Column 3: Hours (Shifted toward the right) */}
+      <div className="md:col-span-1 md:flex md:flex-col md:items-end">
+        <div className="w-fit"> {/* Wrapper to keep text left-aligned but container right-aligned */}
+          <h3 className="text-3xl font-normal mb-6">Hours</h3>
+          <div className="text-lg">
+            <p>Monday – Friday</p>
+            <p>10am – 6pm</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Column 4: Find (At the far end) */}
+      <div className="md:col-span-1 md:flex md:flex-col md:items-end">
+        <div className="w-fit">
+          <h3 className="text-3xl font-normal mb-6">Find</h3>
+          <nav className="flex flex-col space-y-2 text-lg">
+            <Link href="/" className="underline underline-offset-4 hover:opacity-70 transition-opacity">Home</Link>
+            <Link href="/contact" className="underline underline-offset-4 hover:opacity-70 transition-opacity">Contact</Link>
+            <Link href="/blog" className="underline underline-offset-4 hover:opacity-70 transition-opacity">Blog</Link>
+          </nav>
+        </div>
+      </div>
+      
+    </div>
+
+    {/* Footer bottom section */}
+    <div className="border-t border-[#D9D0EE] -mx-5 md:-mx-12">
+      <div className="bg-[#EDE8F5] py-10 px-5 w-full text-center text-sm">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6">
+          <Link href="/privacy" className="underline">Privacy & Cookies Policy</Link>
+          <Link href="/estimate" className="underline">Good Faith Estimate</Link>
+          <Link href="/terms" className="underline">Website Terms & Conditions</Link>
+          <Link href="/disclaimer" className="underline">Disclaimer</Link>
+        </div>
+        <div className="opacity-80 space-y-2">
+          <p>Website Template Credits: <a href="#" className="underline">Go Bloom Creative</a></p>
+          <p>All Rights Reserved © 2024 Dr. Maya Reynolds, PsyD.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }

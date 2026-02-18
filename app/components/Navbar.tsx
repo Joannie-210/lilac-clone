@@ -58,22 +58,22 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP (>900px) */}
-        <div className="hidden lg:flex items-center justify-between w-full">
+        <div className="hidden font-brico lg:ml-4 lg:flex items-center justify-between w-full">
            <Link
           href="/"
           style={{ fontFamily: 'var(--font-Brico)' }} 
-          className="font-bold font-sans text-[#243a1f] text-2xl"
+          className="font-bold font-sans text-[#243a1f] text-3xl"
         >
          Maya Reynolds
 </Link>
 
-          <div className="flex items-center gap-10 text-[#243a1f] font-medium">
+          <div className="flex items-center  gap-15 text-[#243a1f] ">
             <Link
               href="/blog"
               className={`pb-1 border-b-2 transition-all ${
                 isActive("/blog")
                   ? "border-[#243a1f]"
-                  : "border-transparent hover:opacity-70"
+                  : "text-xl border-transparent hover:opacity-70"
               }`}
             >
               Blog
@@ -84,7 +84,7 @@ export default function Navbar() {
               className={`pb-1 border-b-2 transition-all ${
                 isActive("/contact")
                   ? "border-[#243a1f]"
-                  : "border-transparent hover:opacity-70"
+                  : "text-xl border-transparent hover:opacity-70"
               }`}
             >
               Contact
