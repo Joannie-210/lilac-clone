@@ -30,18 +30,18 @@ import { ArrowRight } from 'lucide-react';
 export default function Home() {
   const specialties = [
     {
-      title: "Self-Esteem",
-      description: "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
+      title: "Anxiety & Panic",
+      description: "Whether it's constant worry, racing thoughts, or panic attacks, we'll work together to understand what's driving your anxiety and build lasting relief.",
       image: "/lilac-image-3.webp",
     },
     {
-      title: "Relationships",
-      description: "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
+      title: "Trauma & EMDR",
+      description: "I work with single-incident trauma and complex, long-standing patterns using carefully paced, evidence-based approaches including EMDR.",
       image: "/lilac-image-4.webp",
     },
     {
-      title: "Burnout",
-      description: "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
+      title: "Burnout & Perfectionism",
+      description: "For high-achieving professionals and creatives who feel disconnected after years of pushing through stress—therapy as a space to slow down and reconnect.",
       image: "/lilac-image-5.webp",
     },
   ];
@@ -49,30 +49,30 @@ export default function Home() {
   const faqs = [
     {
       question: "Do you take insurance?",
-      answer: "Yes, I am an in-network provider for several major plans. Please contact me to verify your specific coverage."
+      answer: "I am an out-of-network provider. I can provide a superbill for you to submit to your insurance for potential reimbursement. Please contact me to discuss your options."
     },
     {
       question: "What are your rates?",
-      answer: "My standard rate is $150 per session. I also offer a sliding scale for those in need of financial assistance."
+      answer: "Please reach out directly for current session fees. I'm happy to discuss rates and answer any questions during our initial consultation."
     },
     {
-      question: "Do you have any openings?",
-      answer: "I currently have limited availability for new clients. Please reach out to schedule an initial consultation."
+      question: "Do you offer telehealth?",
+      answer: "Yes. I offer both in-person therapy from my Santa Monica office and secure telehealth sessions for clients located anywhere in California."
     }
   ];
 
   const backgroundItems = [
     { 
       title: "Education", 
-      content: "Master of Science in Clinical Psychology from [University Name], specializing in cognitive behavioral therapy." 
+      content: "Doctor of Psychology (PsyD) in Clinical Psychology, with advanced training in trauma-focused and evidence-based therapeutic modalities." 
     },
     { 
       title: "Licensure", 
-      content: "Licensed Professional Counselor (LPC) in the state of [State], License #123456789." 
+      content: "Licensed Clinical Psychologist in the state of California. All sessions are conducted in accordance with California Board of Psychology standards." 
     },
     { 
       title: "Certifications", 
-      content: "Certified Clinical Trauma Professional (CCTP) and Mindfulness-Based Stress Reduction (MBSR) Practitioner." 
+      content: "Trained in Eye Movement Desensitization and Reprocessing (EMDR), Cognitive Behavioral Therapy (CBT), and Mindfulness-Based Stress Reduction (MBSR)." 
     }
   ];
 
@@ -114,33 +114,33 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION — Soft Lilac light (unchanged) */}
-      <section className="bg-[#EDE8F5] flex h-220 md:h-180 pt-10 w-full">
+      <section className="bg-[#EDE8F5] flex h-220 md:h-250 lg:h-180 pt-10 w-full">
         <div className="w-full md:gap-15 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center px-6">
           
           {/* LEFT IMAGE */}
-          <div className="flex justify-center lg:w-130">
-            <div className="relative w-[280px] sm:w-[360px] md:w-[440px] aspect-[3/4] overflow-hidden rounded-t-[200px]">
-              <Image
-                src="/lilac-image-8.webp"
-                alt="Lilac bouquet"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-
+         <div className="flex justify-center lg:w-130">
+  <div className="relative w-[280px] sm:w-[360px] md:w-[435px] aspect-[3/4] overflow-hidden rounded-t-[200px]">
+    <Image
+      src="/calm.jfif"
+      alt="A picture of lady sitting on a bench"
+      fill
+      className="object-cover"
+      priority
+    />
+    <div className="absolute inset-0 bg-black/30" />
+  </div>
+</div>
           {/* RIGHT CONTENT */}
-          <div className="-mt-20 lg:mt-0 text-center lg:text-left">
-            <h1 className="text-[#6B3F7A] font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight">
-              Live your life
+          <div className="md:-mt-20 lg:mt-10 lg:-ml-5 text-center lg:text-left">
+            <h1 className="text-[#6B3F7A] font-brico text-4xl  md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight">
+              Find calm
               <br />
-              in full bloom
+              within yourself
             </h1>
             <p className="mt-6 text-[#2E2535]/80 text-base md:text-lg">
-              Therapy for Adults in Minneapolis, MN.
+              Therapy for Adults in Santa Monica, CA.
             </p>
-            <button className="mt-8 lg:ml-20 px-4 py-3 border border-[#6B3F7A] text-[#6B3F7A] text-sm tracking-wide uppercase hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
+            <button className="mt-8 lg:ml-20 px-7 cursor-pointer py-3 border border-[#6B3F7A] text-[#6B3F7A] text-sm tracking-wide uppercase hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
               Connect With Me →
             </button>
           </div>
@@ -152,24 +152,24 @@ export default function Home() {
         
         <div className="w-full md:w-1/2 bg-[#f5fff5] flex flex-col">
           <div className="flex-grow p-10 md:p-20 lg:py-24 lg:px-10 flex flex-col justify-center">
-            <h2 className="text-[#154406] text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-10">
-              Live a fulfilling life.
+            <h2 className="text-[#154406] text-4xl md:text-5xl lg:text-5xl  leading-tight mb-6">
+              Feel more at ease.
             </h2>
             <div className="space-y-6 max-w-lg">
-              <p className="text-[#154406]  text-lg md:text-xl leading-relaxed">
-                Life can be challenging—especially when you're trying to 
-                balance your personal and professional life.
+              <p className="text-[#154406] font-lora text-lg md:text-lg leading-relaxed">
+                Many of my clients look capable and put-together on the outside—
+                while quietly carrying anxiety, exhaustion, or the weight of past experiences.
               </p>
-              <p className="text-[#154406]  text-lg md:text-xl leading-relaxed">
-                It's easy to feel like you're alone in facing these 
-                challenges, but I want you to know that I'm here to help.
+              <p className="text-[#154406]  text-lg md:text-lg leading-relaxed">
+                You don't have to keep pushing through alone. 
+                I'm here to help you find steadier ground.
               </p>
             </div>
           </div>
           <button className="border-t cursor-pointer hover:text-white hover:bg-[#154406] border-[#2E2535]/10 p-6 flex justify-center">
             <a 
               href="#contact" 
-              className="grouptext-white flex items-center gap-2 text-sm uppercase tracking-widest  transition-opacity"
+              className="grouptext-white flex font-semibold items-center gap-2 text-sm uppercase tracking-widest  transition-opacity"
             >
               Get In Touch
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -243,28 +243,28 @@ export default function Home() {
             <ul className="space-y-4 text-[#2E2535] text-md md:text-lg mb-10">
               <li className="flex items-start">
                 <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#6B3F7A] shrink-0" />
-                Persistent feelings of sadness or hopelessness
+                Persistent anxiety, worry, or a sense of dread
               </li>
               <li className="flex items-start">
                 <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#6B3F7A] shrink-0" />
-                Trouble focusing or making decisions
+                Panic attacks or chronic physical tension
               </li>
               <li className="flex items-start">
                 <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#6B3F7A] shrink-0" />
-                Difficulty maintaining relationships
+                Difficulty sleeping or always bracing for something to go wrong
               </li>
               <li className="flex items-start">
                 <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#6B3F7A] shrink-0" />
-                Feeling constantly exhausted or unmotivated
+                Lingering effects of past trauma or difficult experiences
               </li>
               <li className="flex items-start">
                 <span className="mr-3 mt-2 h-1.5 w-1.5 rounded-full bg-[#6B3F7A] shrink-0" />
-                A pervasive sense of being overwhelmed
+                Burnout, perfectionism, or feeling disconnected from yourself
               </li>
             </ul>
             <p className="text-[#2E2535] text-lg leading-relaxed max-w-lg">
-              With empathy and guidance, we'll work together to navigate the 
-              challenges life throws your way.
+              With empathy and evidence-based tools, we'll work together at a pace 
+              that feels safe and sustainable for you.
             </p>
           </div>
           <div className="border-t border-[#2E2535]/20 p-6 flex justify-center">
@@ -284,12 +284,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 order-2 lg:order-1">
             <h2 className="text-5xl md:text-7xl font-serif text-[#6B3F7A] font-semibold">
-              Hi, I'm Lilac.
+              Hi, I'm Dr. Maya.
             </h2>
             <p className="text-[#2E2535] text-lg md:text-xl leading-relaxed max-w-lg">
-              I'm committed to providing a safe and supportive environment where we can 
-              explore your thoughts, feelings, and behaviors. With empathy and guidance, 
-              we'll work together to navigate the challenges life throws your way.
+              I'm a licensed clinical psychologist based in Santa Monica, CA. I specialize in 
+              anxiety, trauma, and burnout—helping thoughtful, high-achieving adults find relief, 
+              develop insight, and build a stronger relationship with themselves over time.
             </p>
             <button className="group flex items-center gap-4 border border-[#6B3F7A] px-10 py-4 text-xs tracking-widest uppercase text-[#6B3F7A] font-bold hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
               Let's Chat
@@ -326,9 +326,9 @@ export default function Home() {
               Our Office
             </h2>
             <p className="text-[#4A5A4A] leading-relaxed">
-              Dr. Maya Reynolds' practice is designed to feel calm, grounded, and
-              welcoming—a space where you can slow down, feel at ease, and focus
-              fully on your healing.
+              Dr. Maya Reynolds' Santa Monica practice is designed to feel calm, grounded, and
+              welcoming—a quiet, private space with natural light and a comfortable, uncluttered
+              environment where you can slow down and focus fully on your healing.
             </p>
           </div>
 
@@ -362,20 +362,20 @@ export default function Home() {
 
             <div className="text-[#4A5A4A] space-y-6 leading-relaxed">
               <p>
-                The office offers a quiet, thoughtfully arranged environment that
-                prioritizes comfort, privacy, and emotional safety. Soft lighting,
-                natural textures, and comfortable seating help create a setting
-                that feels both professional and personal.
+                The office offers a thoughtfully arranged environment that prioritizes comfort, 
+                privacy, and emotional safety. Soft lighting, natural textures, and comfortable 
+                seating create a setting that feels both professional and personal. Clients 
+                often share that the space itself helps them feel more at ease when they arrive.
               </p>
               <p>
-                Sessions are available in person, with options for hybrid care when
-                appropriate. Whether you're stepping into therapy for the first
-                time or continuing ongoing work, the space is intended to support
+                Sessions are available in person from the Santa Monica office, with secure 
+                telehealth options for clients located anywhere in California. Whether you're 
+                new to therapy or continuing ongoing work, the space is designed to support 
                 openness, reflection, and trust.
               </p>
               <p className="text-sm text-[#6E7E6E]">
-                Located in a discreet, easily accessible setting to ensure
-                confidentiality and peace of mind.
+                Located at 123th Street 45 W, Santa Monica, CA 90401—a discreet, 
+                easily accessible setting to ensure confidentiality and peace of mind.
               </p>
             </div>
           </div>
@@ -479,8 +479,8 @@ export default function Home() {
         <div className="max-w-2xl mx-auto space-y-8">
           <h2 className="text-3xl md:text-5xl font-serif text-white">Get started today.</h2>
           <div className="text-white/90 text-lg md:text-xl space-y-2">
-            <p>Ready to take the first step towards a happier, healthier you?</p>
-            <p>Contact me to book your first session. I look forward to starting this therapeutic journey with you.</p>
+            <p>Ready to take the first step toward feeling more like yourself?</p>
+            <p>Reach out to schedule a consultation. I look forward to hearing from you and exploring whether we'd be a good fit.</p>
           </div>
           <div className="pt-8">
             <button className="border border-white text-white px-10 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-[#6B3F7A] transition-all duration-300">
@@ -496,10 +496,10 @@ export default function Home() {
           <div className="grid md:px-20 grid-cols-1 md:grid-cols-3 gap-12 mb-20">
             
             <div>
-              <h2 className="text-4xl font-normal mb-6">Lilac Template</h2>
+              <h2 className="text-4xl font-normal mb-6">Dr. Maya Reynolds</h2>
               <div className="space-y-1 text-lg">
-                <p>123 Example Road</p>
-                <p>Minneapolis, MN</p>
+                <p>123th Street 45 W</p>
+                <p>Santa Monica, CA 90401</p>
                 <div className="pt-4">
                   <a href="mailto:email@example.com" className="underline block">email@example.com</a>
                   <a href="tel:5555555555" className="underline block">(555) 555-5555</a>
@@ -537,7 +537,7 @@ export default function Home() {
               Website Template Credits: <a href="#" className="underline">Go Bloom Creative</a>
             </p>
             <p className="pt-8">
-              All Rights Reserved © 2024 Your Business Name Here, LLC.
+              All Rights Reserved © 2024 Dr. Maya Reynolds, PsyD.
             </p>
           </div>
         </div>

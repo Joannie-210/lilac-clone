@@ -22,3 +22,14 @@ module.exports = {
     },
   },
 };
+
+theme: {
+    extend: {
+      fontFamily: {
+        // 'sans' or 'brico' - name it whatever you prefer
+        brico: ['var(--font-brico)', 'sans-serif'], 
+        lora: ['var(--font-lora)', 'serif'],
+      },
+    },
+  },
+ 

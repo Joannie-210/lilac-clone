@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`bg-white  fixed top-0 left-0 w-full px-6 lg:px-10 flex items-center justify-between font-sans h-15 z-50 transition-transform duration-300  backdrop-blur-md ${
+        className={`bg-[#EDE8F5] fixed top-0 left-0 w-full px-6 lg:px-10 flex items-center justify-between font-sans h-15 z-50 transition-transform duration-300  backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -48,22 +48,24 @@ export default function Navbar() {
           </button>
 
           {/* Title Right */}
-          <Link
-            href="/"
-            className="text-xl font-bold text-[#243a1f]"
-          >
-            Lilac template
-          </Link>
+       <Link
+          href="/"
+          style={{ fontFamily: 'var(--font-Brico)' }} 
+          className="font-bold text-[#243a1f] text-xl"
+        >
+         Maya Reynolds
+</Link>
         </div>
 
         {/* DESKTOP (>900px) */}
         <div className="hidden lg:flex items-center justify-between w-full">
-          <Link
-            href="/"
-            className="text-2xl font-bold text-[#243a1f]"
-          >
-            Lilac template
-          </Link>
+           <Link
+          href="/"
+          style={{ fontFamily: 'var(--font-Brico)' }} 
+          className="font-bold font-sans text-[#243a1f] text-2xl"
+        >
+         Maya Reynolds
+</Link>
 
           <div className="flex items-center gap-10 text-[#243a1f] font-medium">
             <Link
