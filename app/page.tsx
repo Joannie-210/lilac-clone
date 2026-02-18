@@ -6,26 +6,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { ArrowRight } from 'lucide-react';
 
-/*
-  COLOR PALETTE — Soft Lilac + Faded Sage Green + Plum Accent
-  -------------------------------------------------------------
-  Soft Lilac (light):     #EDE8F5
-  Soft Lilac (mid):       #D9D0EE
-  Soft Lilac (deep):      #BFB2E0
-  Soft Lilac (muted bg):  #F5F2FB
-
-  Faded Sage (light):     #E4EDE4
-  Faded Sage (mid):       #CCDACC
-  Faded Sage (deep):      #A8BFA8
-  Faded Sage (muted bg):  #F2F6F2
-
-  Accent (Plum):          #6B3F7A
-  Accent (dark):          #4E2B5A
-
-  Text (dark):            #2E2535
-  Text (medium):          #4A5A4A
-  Text (light):           #6E7E6E
-*/
 
 export default function Home() {
   const specialties = [
@@ -113,11 +93,11 @@ export default function Home() {
       {/* NAVBAR */}
       <Navbar />
 
-      {/* HERO SECTION — Soft Lilac light (unchanged) */}
+      {/* HERO SECTION */}
        <section className="bg-[#EDE8F5] flex h-220 md:h-240 lg:h-250 w-full">
         <div className="w-full  md:gap-15 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center px-6">
           
-          {/* LEFT IMAGE */}
+        
          <div className="flex justify-center lg:mt-10 lg:w-150">
   <div className="relative w-[280px] mt-10 h-100 sm:w-[360px] lg:h-[880px] md:w-[520px] lg:mt-10 overflow-hidden rounded-t-full">
     <Image
@@ -147,7 +127,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TWO-COLUMN SECTION — Faded Sage mid (was Warm Stone mid) */}
+      {/* TWO-COLUMN SECTION  */}
       <section className="flex flex-col md:flex-row w-full min-h-[700px] overflow-hidden font-sans">
         
         <div className="w-full md:w-1/2 bg-[#f5fff5] flex flex-col">
@@ -190,7 +170,7 @@ export default function Home() {
         
       </section>
 
-      {/* SPECIALTIES GRID — Soft Lilac muted bg, Faded Sage cards (unchanged lilac bg, sage cards) */}
+      {/* SPECIALTIES GRID  */}
       <section className="bg-[#F2F6F2]  pt-30 pb-20 px-6 md:px-10">
         <h2 className="text-center text-4xl md:text-5xl font-semibold text-[#2E2535] mb-20">
           My Specialties
@@ -282,7 +262,7 @@ export default function Home() {
 
       </section>
 
-      {/* BIO SECTION — Faded Sage light (was Warm Stone light) */}
+      {/* BIO SECTION*/}
       <section className="bg-[#f5fff5] min-h-175 lg:[1000px] flex items-center px-6 py-20 lg:pt-25 lg:pb-40 md:px-12 lg:px-25">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 lg:w-170 order-2 lg:order-1">
@@ -321,11 +301,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OFFICE SECTION — Soft Lilac light (unchanged) */}
+      {/* OFFICE SECTION */}
       <section className="bg-[#EDE8F5] py-20 px-6 md:px-12">
   <div className="max-w-6xl mx-auto">
 
-    {/* Section Header */}
+ 
     <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6 border-b border-[#BFB2E0] pb-10">
       <div>
         <p className="text-xs uppercase tracking-[0.25em] text-[#6B3F7A] mb-3 font-medium">Santa Monica, CA</p>
@@ -338,10 +318,10 @@ export default function Home() {
       </p>
     </div>
 
-    {/* Main Grid */}
+
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch mb-12">
 
-      {/* Tall left image */}
+  
       <div className="relative lg:col-span-2 min-h-[420px] lg:min-h-0 rounded-2xl overflow-hidden">
         <Image
           src="/office2.jpeg"
@@ -373,7 +353,6 @@ export default function Home() {
 
     </div>
 
-    {/* Bottom text row */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-10 border-t border-[#BFB2E0]">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-[#6B3F7A] mb-3 font-medium">The Space</p>
@@ -398,7 +377,7 @@ export default function Home() {
   </div>
 </section>
 
-      {/* FAQ SECTION — Fade d Sage muted bg (was Warm Stone muted bg)*/}
+      {/* FAQ SECTION*/}
       <section className="bg-[#F2F6F2] py-20 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           
@@ -453,7 +432,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROFESSIONAL BACKGROUND — Faded Sage light (was Warm Stone light) */}
+      {/* PROFESSIONAL BACKGROUND */}
       <section className="bg-[#E4EDE4] py-24 h-auto px-6">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-4xl lg:text-[45px] font-serif text-[#2E2535] text-center mb-8">
@@ -506,7 +485,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER — Faded Sage muted bg (was Warm Stone muted bg) */}
+      {/* FOOTER*/}
       <footer className="w-full bg-[#F2F6F2] text-[#2E2535] pt-16 font-sans">
   <div className="max-w-8xl mx-auto px-5 md:px-12">
     

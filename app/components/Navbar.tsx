@@ -36,9 +36,9 @@ export default function Navbar() {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        {/* MOBILE (≤900px) */}
+        {/* MOBILE */}
         <div className="flex items-center justify-between w-full lg:hidden">
-          {/* Hamburger Left */}
+      
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="flex flex-col justify-center gap-1"
@@ -47,7 +47,7 @@ export default function Navbar() {
             <span className="w-6 h-[2px] bg-[#243a1f]"></span>
           </button>
 
-          {/* Title Right */}
+        
        <Link
           href="/"
           style={{ fontFamily: 'var(--font-Brico)' }} 
@@ -57,7 +57,7 @@ export default function Navbar() {
 </Link>
         </div>
 
-        {/* DESKTOP (>900px) */}
+    
         <div className="hidden font-brico lg:ml-4 lg:flex items-center justify-between w-full">
            <Link
           href="/"
@@ -93,7 +93,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* MOBILE DROPDOWN MENU */}
+
       {menuOpen && (
         <div className="fixed top-20 left-0 w-full bg-[#FDF8F3] shadow-md lg:hidden flex flex-col items-center py-6 gap-6 z-40">
           <Link
