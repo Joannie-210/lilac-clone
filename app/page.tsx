@@ -12,17 +12,17 @@ export default function Home() {
     {
       title: "Anxiety & Panic",
       description: "Whether it's constant worry, or panic attacks, we'll work together to understand what's driving your anxiety and build lasting relief.",
-      image: "/anxiety.jfif",
+      image: "/anxiety.webp",
     },
     {
       title: "Trauma & EMDR",
       description: "I work with single-incident trauma and complex, long-standing patterns using carefully paced, evidence-based approaches including EMDR.",
-      image: "/trauma.jfif",
+      image: "/trauma.webp",
     },
     {
       title: "Burnout & Perfectionism",
       description: "For high-achieving professionals who feel detached after years of pushing through stress—therapy as a space to slow down and reconnect.",
-      image: "/burnout.jfif",
+      image: "/burnout.webp",
     },
   ];
 
