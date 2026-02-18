@@ -94,14 +94,14 @@ export default function Home() {
       <Navbar />
 
       {/* HERO SECTION */}
-       <section className="bg-[#EDE8F5] flex h-220 md:h-240 lg:h-250 w-full">
+       <section className="bg-[#EDE8F5] flex h-220 md:h-240 lg:h-220 w-full">
         <div className="w-full  md:gap-15 mx-auto grid grid-cols-1 lg:grid-cols-2 items-center px-6">
           
         
-         <div className="flex justify-center lg:mt-10 lg:w-150">
-  <div className="relative w-[280px] mt-10 h-100 sm:w-[360px] lg:h-[880px] md:w-[520px] lg:mt-10 overflow-hidden rounded-t-full">
+         <div className="flex justify-center lg:mt-10 lg:w-130">
+  <div className="relative w-[250px] mt-10 h-100 sm:w-[360px] lg:h-[760px] md:w-[480px] lg:mt-10 overflow-hidden rounded-t-full">
     <Image
-      src="/calm.jfif"
+      src="/calm.webp"
       alt="A picture of lady sitting on a bench"
       fill
       className="object-cover"
@@ -111,8 +111,8 @@ export default function Home() {
   </div>
 </div>
           {/* RIGHT CONTENT */}
-          <div className="md:-mt-20 -lg:mt-25  text-center lg:text-left">
-            <h1 className="text-[#6B3F7A] font-brico text-4xl  md:text-5xl lg:text-[75px] leading-tight tracking-tight">
+          <div className="md:-mt-20 -lg:-mt-45  text-center lg:text-left">
+            <h1 className="text-[#6B3F7A] font-brico text-4xl  md:text-5xl lg:text-[65px] leading-tight tracking-tight">
               Find calm
               <br />
               within yourself
@@ -171,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* SPECIALTIES GRID  */}
-      <section className="bg-[#F2F6F2]  pt-30 pb-20 px-6 md:px-10">
+      <section className="bg-[#F2F6F2]  pt-30 pb-10 px-6 md:px-10">
         <h2 className="text-center text-4xl md:text-5xl font-semibold text-[#2E2535] mb-20">
           My Specialties
         </h2>
@@ -187,7 +187,7 @@ export default function Home() {
               <p className="text-[#2E2535] mb-12 text-left leading-relaxed">
                 {item.description}
               </p>
-              <div className="relative w-48 h-48 lg:w-70 lg:h-70 md:w-56 md:h-56 rounded-full overflow-hidden mx-auto">
+              <div className="relative w-48 h-48 lg:w-60 lg:h-60 md:w-56 md:h-56 lg:-mt-5 rounded-full overflow-hidden mx-auto">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -207,7 +207,7 @@ export default function Home() {
         <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-0">
           <Image
             fill
-            src="/relaxed.jfif" 
+            src="/relaxed.webp" 
             alt="Woman resting head back with eyes closed"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
@@ -263,25 +263,25 @@ export default function Home() {
       </section>
 
       {/* BIO SECTION*/}
-      <section className="bg-[#f5fff5] min-h-175 lg:[1000px] flex items-center px-6 py-20 lg:pt-25 lg:pb-40 md:px-12 lg:px-25">
+      <section className="bg-[#f5fff5] min-h-175 lg:[1000px] flex items-center px-6 py-20 lg:pt-25 lg:pb-40 md:px-12 lg:px-15">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8 lg:w-170 order-2 lg:order-1">
             <h2 className="text-5xl md:text-6xl font-serif text-[#6B3F7A] ">
               Hi, I'm Dr. Maya.
             </h2>
-            <p className="text-[#2E2535] text-lg md:text-xl leading-relaxed max-w-xl">
+            <p className="text-[#2E2535] text-lg md:text-lg leading-relaxed max-w-xl">
               I'm a licensed clinical psychologist based in Santa Monica, CA. I specialize in 
               anxiety, trauma, and burnout—helping thoughtful, high-achieving adults find relief, 
               develop insight, and build a stronger relationship with themselves over time.
             </p>
-            <button className="group cursor-pointer mx-auto lg:mt-20 flex items-center gap-4 border border-[#6B3F7A] px-10 py-4 text-sm tracking-widest uppercase text-[#6B3F7A] font-bold hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
+            <button className="group cursor-pointer mx-auto lg:mt-15 flex items-center gap-4 border border-[#6B3F7A] px-10 py-4 text-sm tracking-widest uppercase text-[#6B3F7A] font-bold hover:bg-[#6B3F7A] hover:text-white transition-all duration-300">
               Let's Talk
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
           <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative w-75 h-112.5 md:w-112.5 md:h-162.5 overflow-hidden rounded-t-full shadow-md">
+            <div className="relative w-75 h-112.5 md:w-100.5 md:h-162.5 overflow-hidden rounded-t-full shadow-md">
               <Image 
                 src="/MR.png" 
                 alt="Person holding lilacs"
@@ -289,7 +289,7 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            <div className="absolute -bottom-10 right-0 md:-right-10 w-40 h-40 md:w-72 md:h-72 rounded-full overflow-hidden shadow-xl">
+            <div className="absolute -bottom-10 right-0 md:-right-10 w-40 h-40 md:w-62 md:h-62 rounded-full overflow-hidden shadow-xl">
               <Image 
                 src="/office1.jpeg" 
                 alt="Close up detail"
@@ -335,7 +335,7 @@ export default function Home() {
       <div className="lg:col-span-3 grid grid-rows-2 gap-6">
         <div className="relative rounded-2xl overflow-hidden min-h-[220px]">
           <Image
-            src="/office3.jfif"
+            src="/office3.webp"
             alt="Comfortable counseling space with seating"
             fill
             className="object-cover"
@@ -378,13 +378,13 @@ export default function Home() {
 </section>
 
       {/* FAQ SECTION*/}
-      <section className="bg-[#F2F6F2] py-20 px-6 md:px-12 lg:px-24">
+      <section className="bg-[#F2F6F2] py-20 px-6 md:px-12 lg:px-14">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           
-          <div className="relative lg:ml-10 w-full max-w-[420px] mx-auto lg:mx-0">
-            <div className="relative w-full aspect-[3/4] overflow-hidden rounded-t-[200px] shadow-sm">
+          <div className="relative lg:ml-10 w-full max-w-[400px] mx-auto lg:mx-0">
+            <div className="relative w-full aspect-[3/4] overflow-hidden rounded-t-full shadow-sm">
               <Image
-                src="/faqss.jfif"
+                src="/faqss.webp"
                 alt="Decorative dried flowers"
                 fill
                 sizes="(max-width: 640px) 100vw, 420px"
@@ -411,7 +411,7 @@ export default function Home() {
                       <div className="mr-6">
                         <PlusMinusIcon isOpen={isOpen} />
                       </div>
-                      <span className="text-xl md:text-2xl lg:text-[42px] font-medium text-[#2E2535]">
+                      <span className="text-xl md:text-2xl lg:text-[35px] font-medium text-[#2E2535]">
                         {faq.question}
                       </span>
                     </button>
@@ -433,9 +433,9 @@ export default function Home() {
       </section>
 
       {/* PROFESSIONAL BACKGROUND */}
-      <section className="bg-[#E4EDE4] py-24 h-auto px-6">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-4xl lg:text-[45px] font-serif text-[#2E2535] text-center mb-8">
+      <section className="bg-[rgb(228,237,228)] py-14 h-auto px-6">
+        <div className="max-w-xl mx-auto">
+          <h2 className="text-4xl md:text-4xl lg:text-[36px] font-serif text-[#2E2535] text-center mb-8">
             My Professional Background
           </h2>
 
