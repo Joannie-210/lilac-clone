@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full px-6 lg:px-10 flex items-center justify-between font-sans h-20 z-50 transition-transform duration-300 bg-[#FDF8F3]/80 backdrop-blur-md ${
+        className={`bg-white  fixed top-0 left-0 w-full px-6 lg:px-10 flex items-center justify-between font-sans h-15 z-50 transition-transform duration-300  backdrop-blur-md ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
